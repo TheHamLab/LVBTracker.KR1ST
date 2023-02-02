@@ -1,12 +1,12 @@
 
 ; CC5X Version 3.8, Copyright (c) B Knudsen Data
 ; C compiler for the PICmicro family
-; ************   3. Feb 2022  20:22  *************
+; ************   1. Feb 2023  22:22  *************
 
         processor  16F876A
         radix  DEC
 
-        __config 0x3F31
+        __config 0x3F71
 
 INDF        EQU   0x00
 TMR0        EQU   0x01
@@ -317,7 +317,11 @@ ci          EQU   0x32
                         ;//#pragma config FOSC = XT
                         ;//#pragma config BOREN = OFF
                         ;//#pragma config PWRTE = ON
-                        ;#pragma config = 0x3F31
+                        ;//
+                        ;//AK 02/02/2023 Changed config bits to turn on BOREN
+                        ;//#pragma config = 0x3F31
+                        ;#pragma config = 0x3F71
+                        ;//
                         ;// Todo:
                         ;// * Make work without LCD - OK 0.2
                         ;// * Test -180 - 0 - +180 rotator. OK 0.2

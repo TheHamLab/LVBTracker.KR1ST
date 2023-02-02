@@ -7,7 +7,11 @@
 //#pragma config FOSC = XT
 //#pragma config BOREN = OFF
 //#pragma config PWRTE = ON
-#pragma config = 0x3F31
+//
+//AK 02/02/2023 Changed config bits to turn on BOREN
+//#pragma config = 0x3F31
+#pragma config = 0x3F71
+//
 // Todo:
 // * Make work without LCD - OK 0.2
 // * Test -180 - 0 - +180 rotator. OK 0.2
